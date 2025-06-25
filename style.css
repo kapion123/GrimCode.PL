@@ -1,0 +1,126 @@
+body {
+  margin: 0;
+  font-family: 'Orbitron', sans-serif;
+  background: linear-gradient(to right, #141e30, #243b55);
+  color: #ffffff;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3rem;
+  color: #8e2de2;
+}
+
+h2 {
+  margin-top: 2rem;
+  color: #b44cff;
+}
+
+p {
+  font-size: 1.1rem;
+  color: #ccc;
+}
+
+.buttons a {
+  display: inline-block;
+  margin: 0.5rem;
+  padding: 0.6rem 1.5rem;
+  background: #4a00e0;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.buttons a:hover {
+  background: #8e2de2;
+}
+
+.team {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 1rem 0;
+}
+
+.member img {
+  width: 80px;
+  border-radius: 50%;
+  border: 2px solid #8e2de2;
+}
+
+.member p {
+  margin-top: 0.5rem;
+}
+
+.bots, .pricing {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.bot, .plan {
+  background: #1c1c2b;
+  padding: 1rem;
+  border-radius: 15px;
+  width: 250px;
+  box-shadow: 0 0 15px #8e2de2;
+}
+
+.bot h3, .plan h4 {
+  color: #b44cff;
+}
+
+.bot p, .plan p {
+  color: #ddd;
+  font-size: 0.95rem;
+}
+
+.bot a {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: #8e2de2;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.bot a:hover {
+  background: #4a00e0;
+}
+
+.why {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+}
+
+.why li {
+  margin: 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+.order-button {
+  display: inline-block;
+  margin-top: 1rem;
+  background: #4a00e0;
+  color: white;
+  padding: 0.8rem 2rem;
+  border-radius: 12px;
+  text-decoration: none;
+  box-shadow: 0 0 10px #4a00e0;
+  transition: 0.3s;
+}
+
+.order-button:hover {
+  background: #8e2de2;
+}
