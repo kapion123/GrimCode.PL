@@ -1,187 +1,153 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>GrimCode - Nowoczesne boty Discord</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GrimCode - Boty Discord</title>
+  <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Orbitron', sans-serif;
-    }
-
-    body {
-      background: linear-gradient(135deg, #0a0f1f, #00111a);
-      color: #e0f7ff;
-      line-height: 1.6;
-      padding: 0 20px;
-    }
-
-    header {
-      text-align: center;
-      padding: 80px 20px 40px;
-    }
-
-    header h1 {
-      font-size: 4rem;
-      color: #00d4ff;
-      text-shadow: 0 0 10px #00bfff;
-    }
-
-    header p {
-      font-size: 1.4rem;
-      margin-top: 10px;
-      color: #aadfff;
-    }
-
-    .buttons {
-      margin-top: 25px;
-    }
-
-    .buttons a {
-      background: #00d4ff;
-      color: #000;
-      padding: 12px 25px;
-      margin: 0 10px;
-      border-radius: 25px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: 0.3s;
-    }
-
-    .buttons a:hover {
-      background: #009ec3;
-      color: white;
-    }
-
-    section {
-      margin: 60px auto;
-      max-width: 1000px;
-    }
-
-    section h2 {
-      font-size: 2.5rem;
-      margin-bottom: 20px;
-      color: #00caff;
-      text-align: center;
-    }
-
-    .team, .bots, .features {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 30px;
-      justify-content: center;
-    }
-
-    .card {
-      background: rgba(0, 212, 255, 0.05);
-      padding: 20px;
-      border-radius: 15px;
-      text-align: center;
-      box-shadow: 0 0 15px rgba(0, 212, 255, 0.3);
-      width: 220px;
-    }
-
-    .card img {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      margin-bottom: 10px;
-      border: 3px solid #00caff;
-    }
-
-    .card h3 {
-      font-size: 1.2rem;
-      color: #00eaff;
-      margin: 10px 0 5px;
-    }
-
-    .card p {
-      font-size: 0.95rem;
-      color: #a7e9ff;
-    }
-
-    footer {
-      text-align: center;
-      padding: 30px 0;
-      color: #88cadd;
-      font-size: 0.9rem;
-      border-top: 1px solid #0a88a5;
-      margin-top: 60px;
-    }
-  </style>
 </head>
 <body>
   <header>
     <h1>GrimCode</h1>
-    <p>Tworzymy profesjonalne i nowoczesne boty Discord dopasowane do Twoich potrzeb</p>
+    <p>Tworzymy nowoczesne boty Discord, systemy i integracje dla Twojego serwera</p>
     <div class="buttons">
-      <a href="https://discord.gg/ApudjPD6Sm" target="_blank">Dołącz na Discord</a>
-      <a href="https://github.com/kapion123" target="_blank">GitHub</a>
+      <a href="https://discord.gg/ApudjPD6Sm" target="_blank">Dołącz na Discorda</a>
     </div>
   </header>
 
-  <section id="team">
-    <h2>Nasz Zespół</h2>
+  <section>
+    <h2>Zarząd</h2>
     <div class="team">
       <div class="card">
         <img src="https://mc-heads.net/avatar/Kapion123" alt="Kapion">
         <h3>Kapion</h3>
-        <p>Założyciel & Główny Programista</p>
+        <p>Właściciel GrimCode</p>
       </div>
       <div class="card">
         <img src="https://mc-heads.net/avatar/Oki" alt="Oki">
         <h3>Oki</h3>
-        <p>Programista / Developer botów</p>
+        <p>Developer & Support</p>
       </div>
     </div>
   </section>
 
-  <section id="bots">
+  <section>
+    <h2>O nas</h2>
+    <p style="text-align: center; max-width: 800px; margin: auto;">
+      GrimCode to zespół pasjonatów programowania, którzy specjalizują się w tworzeniu nowoczesnych, bezpiecznych i wydajnych botów Discord oraz rozbudowanych systemów dla społeczności online.
+    </p>
+    <ul class="why">
+      <li>🔧 Ponad 4 lata doświadczenia</li>
+      <li>🎯 Projekty na zamówienie</li>
+      <li>📊 Panele zarządzania dla właścicieli serwerów</li>
+      <li>🛡️ Bezpieczne systemy i automatyczne backupy</li>
+    </ul>
+  </section>
+
+  <section>
     <h2>Nasze Boty</h2>
     <div class="bots">
       <div class="card">
-        <h3>GrimMod</h3>
-        <p>Automaty moderacji, warny, kicki, logi i wiele więcej.</p>
+        <h3>ModBot</h3>
+        <p>Moderacja, bany, logi, powiadomienia, ostrzeżenia</p>
       </div>
       <div class="card">
-        <h3>GrimTickets</h3>
-        <p>System ticketów z panelem, reakcjami i powiadomieniami.</p>
+        <h3>TicketBot</h3>
+        <p>Zaawansowany system ticketów z kategoriami i logowaniem</p>
       </div>
       <div class="card">
-        <h3>GrimFun</h3>
-        <p>Komendy /meme, /8ball, reakcje i zabawne funkcje.</p>
+        <h3>FunBot</h3>
+        <p>/meme, /ping, /8ball, reakcje, zabawy, ranking</p>
+      </div>
+      <div class="card">
+        <h3>PartnerBot</h3>
+        <p>System partnerstw z automatycznym naliczaniem i rankingiem</p>
+      </div>
+      <div class="card">
+        <h3>ShopBot</h3>
+        <p>Sklep serwerowy z obsługą płatności, automatyczne dostawy ról i rang</p>
+      </div>
+      <div class="card">
+        <h3>StatBot</h3>
+        <p>Statystyki aktywności, czas online, wiadomości, XP i więcej</p>
       </div>
     </div>
   </section>
 
-  <section id="features">
-    <h2>Dlaczego warto wybrać GrimCode?</h2>
+  <section>
+    <h2>Dlaczego GrimCode?</h2>
     <div class="features">
+      <div class="card"><p>⚡ Szybka realizacja</p></div>
+      <div class="card"><p>🤝 Wsparcie techniczne 24/7</p></div>
+      <div class="card"><p>🛠️ Edytowalny kod źródłowy</p></div>
+      <div class="card"><p>💰 Atrakcyjne ceny i elastyczne pakiety</p></div>
+      <div class="card"><p>📦 Gotowe szablony + projekty indywidualne</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Cennik</h2>
+    <div class="bots">
       <div class="card">
-        <h3>🔧 Własne systemy</h3>
-        <p>Tworzymy boty dokładnie takie, jakich potrzebujesz.</p>
+        <h4>Pakiet Start</h4>
+        <p>✔️ Prosty bot z 5 komendami<br>💸 10 PLN</p>
       </div>
       <div class="card">
-        <h3>⚡ Szybka realizacja</h3>
-        <p>Krótki czas realizacji i szybkie wsparcie.</p>
+        <h4>Pakiet Premium</h4>
+        <p>✔️ System ticketów, logi, moderacja<br>💸 25 PLN</p>
       </div>
       <div class="card">
-        <h3>💬 Kontakt Discord</h3>
-        <p>Błyskawiczny kontakt przez nasz serwer.</p>
-      </div>
-      <div class="card">
-        <h3>💸 Tanie usługi</h3>
-        <p>Atrakcyjne ceny i wysoka jakość kodu.</p>
+        <h4>Pakiet Custom</h4>
+        <p>✔️ Bot na zamówienie z panelem<br>💸 Od 40 PLN</p>
       </div>
     </div>
+  </section>
+
+  <section>
+    <h2>Opinie klientów</h2>
+    <div class="bots">
+      <div class="card">
+        <p>"Świetna współpraca, szybka realizacja i profesjonalne podejście."<br><strong>- Adrian</strong></p>
+      </div>
+      <div class="card">
+        <p>"Bot działa lepiej niż się spodziewałem, polecam każdemu!"<br><strong>- Natalia</strong></p>
+      </div>
+      <div class="card">
+        <p>"Wzorowy support i pełne zaangażowanie. GrimCode rządzi!"<br><strong>- Kacper</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Aktualności</h2>
+    <div class="bots">
+      <div class="card">
+        <h4>Nowy ShopBot</h4>
+        <p>Wprowadziliśmy nowego ShopBota – idealny do sklepów Discord!</p>
+      </div>
+      <div class="card">
+        <h4>Nowa współpraca</h4>
+        <p>Dołączyliśmy do partnerstwa z siecią serwerów Minecraft!</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Kontakt</h2>
+    <form action="mailto:kontakt@grimcode.pl" method="post" enctype="text/plain" style="max-width: 600px; margin: auto;">
+      <label for="name">Imię:</label><br>
+      <input type="text" id="name" name="name" required style="width: 100%; margin-bottom: 10px;"><br>
+      <label for="email">Email:</label><br>
+      <input type="email" id="email" name="email" required style="width: 100%; margin-bottom: 10px;"><br>
+      <label for="message">Wiadomość:</label><br>
+      <textarea id="message" name="message" rows="4" required style="width: 100%; margin-bottom: 10px;"></textarea><br>
+      <button type="submit" style="padding: 10px 20px; background: #00d4ff; color: black; border: none; border-radius: 10px; cursor: pointer;">Wyślij</button>
+    </form>
   </section>
 
   <footer>
-    &copy; 2025 GrimCode | Wszystkie prawa zastrzeżone
+    &copy; 2025 GrimCode. Wszelkie prawa zastrzeżone. | kontakt@grimcode.pl
   </footer>
 </body>
 </html>
