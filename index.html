@@ -1,37 +1,244 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>GrimCode - Boty Discord</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet" />
+  <style>
+    /* ====== Style CSS ====== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Orbitron', sans-serif;
+      color: #ddd;
+    }
+    body {
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 0 20px 40px;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #00c6ff, #0072ff);
+      width: 100%;
+      padding: 100px 0 80px;
+      box-shadow: 0 0 15px #00c6ff;
+      margin-bottom: 40px;
+    }
+    .hero h1 {
+      font-size: 4rem;
+      margin-bottom: 0.2em;
+      color: #fff;
+      text-shadow: 0 0 10px #00c6ff;
+    }
+    .hero p {
+      font-size: 1.4rem;
+      margin-bottom: 1.5em;
+      color: #d0e7ff;
+      text-shadow: 0 0 5px #0072ff;
+    }
+    .hero-buttons a {
+      background: #fff;
+      color: #0072ff;
+      text-decoration: none;
+      padding: 12px 30px;
+      margin: 0 15px;
+      font-weight: 700;
+      border-radius: 25px;
+      box-shadow: 0 5px 15px #00a1ffaa;
+      transition: background 0.3s, color 0.3s;
+    }
+    .hero-buttons a:hover {
+      background: #0072ff;
+      color: #fff;
+      box-shadow: 0 7px 20px #00c6ffcc;
+    }
+
+    .section {
+      max-width: 1000px;
+      margin-bottom: 50px;
+    }
+    .section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+      color: #00aaff;
+      text-shadow: 0 0 10px #0088cc;
+      border-bottom: 2px solid #00aaff;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+
+    .team {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+    .member {
+      background: rgba(255 255 255 / 0.1);
+      padding: 15px;
+      border-radius: 20px;
+      width: 140px;
+      box-shadow: 0 0 15px #00aaff66;
+      transition: transform 0.3s ease;
+    }
+    .member:hover {
+      transform: scale(1.1);
+    }
+    .member img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      border: 3px solid #00aaff;
+      margin-bottom: 10px;
+    }
+    .member p {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #00dfff;
+    }
+
+    .bots {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+    .bot {
+      background: rgba(255 255 255 / 0.1);
+      border-radius: 20px;
+      padding: 25px;
+      width: 280px;
+      box-shadow: 0 0 15px #00aaff66;
+      transition: transform 0.3s ease;
+      cursor: default;
+    }
+    .bot:hover {
+      transform: scale(1.05);
+    }
+    .bot h3 {
+      color: #00dfff;
+      margin-bottom: 15px;
+      font-size: 1.5rem;
+    }
+    .bot p {
+      font-size: 1rem;
+      color: #aaddffcc;
+      line-height: 1.4;
+    }
+
+    #dlaczego ul {
+      list-style: none;
+      max-width: 600px;
+      margin: 0 auto;
+      font-size: 1.2rem;
+      color: #c0eaff;
+      line-height: 1.6;
+    }
+    #dlaczego ul li {
+      margin: 15px 0;
+      position: relative;
+      padding-left: 30px;
+    }
+    #dlaczego ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 6px;
+      width: 18px;
+      height: 18px;
+      background: #00aaff;
+      border-radius: 50%;
+    }
+
+    .pricing {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      flex-wrap: wrap;
+      max-width: 900px;
+      margin: 0 auto 40px;
+    }
+    .plan {
+      background: rgba(255 255 255 / 0.1);
+      border-radius: 20px;
+      padding: 25px;
+      width: 260px;
+      box-shadow: 0 0 15px #00aaff66;
+      transition: transform 0.3s ease;
+      cursor: default;
+    }
+    .plan:hover {
+      transform: scale(1.05);
+    }
+    .plan h4 {
+      font-size: 1.6rem;
+      margin-bottom: 10px;
+      color: #00dfff;
+    }
+    .plan p {
+      font-size: 1rem;
+      color: #aaddffcc;
+      line-height: 1.4;
+    }
+
+    .order-button {
+      display: inline-block;
+      background: #00c6ff;
+      color: #004a8f;
+      font-weight: 700;
+      padding: 15px 45px;
+      border-radius: 50px;
+      text-decoration: none;
+      box-shadow: 0 5px 20px #00aaffcc;
+      transition: background 0.3s;
+      margin-bottom: 40px;
+    }
+    .order-button:hover {
+      background: #0072ff;
+      color: #fff;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px 0;
+      color: #0088ccaa;
+      font-size: 0.9rem;
+      border-top: 1px solid #00aaff44;
+      margin-top: auto;
+    }
+  </style>
 </head>
 <body>
-  <header class="hero">
-    <div class="hero-content">
-      <h1>GrimCode</h1>
-      <p>Profesjonalne boty Discord dla Twojego serwera</p>
-      <div class="hero-buttons">
-        <a href="https://github.com/" target="_blank">GitHub</a>
-        <a href="https://discord.gg/" target="_blank">Discord</a>
-      </div>
+
+  <section class="hero">
+    <h1>GrimCode</h1>
+    <p>Tworzymy nowoczesne boty Discord i systemy dla Twojego serwera</p>
+    <div class="hero-buttons">
+      <a href="https://github.com/kapion123" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://discord.gg/" target="_blank" rel="noopener noreferrer">Discord</a>
     </div>
-  </header>
+  </section>
 
   <section class="section" id="zarzad">
     <h2>Zarząd</h2>
     <div class="team">
       <div class="member">
-        <img src="https://mc-heads.net/avatar/Kapion123" alt="Kapion">
+        <img src="https://mc-heads.net/avatar/Kapion123" alt="Kapion" />
         <p>Kapion</p>
       </div>
       <div class="member">
-        <img src="https://mc-heads.net/avatar/Oki" alt="Oki">
+        <img src="https://mc-heads.net/avatar/Oki" alt="Oki" />
         <p>Oki</p>
       </div>
       <div class="member">
-        <img src="https://mc-heads.net/avatar/Kreatywny" alt="Kreatywny">
+        <img src="https://mc-heads.net/avatar/Kreatywny" alt="Kreatywny" />
         <p>Kreatywny</p>
       </div>
     </div>
@@ -42,15 +249,33 @@
     <div class="bots">
       <div class="bot">
         <h3>ModBot</h3>
-        <p>Moderacja, automatyczne bany, logi, reakcje</p>
+        <p>Bot do moderacji, automatyczne bany, kicki, logi, reakcje.</p>
       </div>
       <div class="bot">
         <h3>TicketBot</h3>
-        <p>System ticketów, powiadomienia, panel</p>
+        <p>Bot z systemem ticketów, panel, wybór kategorii i powiadomienia.</p>
       </div>
       <div class="bot">
         <h3>FunBot</h3>
-        <p>Komendy 4fun: /meme, /8ball, /ping</p>
+        <p>4fun, komendy typu /meme, /ping, /8ball i wiele więcej.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="cennik">
+    <h2>Cennik</h2>
+    <div class="pricing">
+      <div class="plan">
+        <h4>Podstawowy</h4>
+        <p>✔️ Komendy /ping /help<br />✔️ Kick, ban<br />💸 10 PLN</p>
+      </div>
+      <div class="plan">
+        <h4>Premium</h4>
+        <p>✔️ Ticket system<br />✔️ Logi i powiadomienia<br />✔️ AntiSpam<br />💸 25 PLN</p>
+      </div>
+      <div class="plan">
+        <h4>Custom</h4>
+        <p>✔️ Bot na zamówienie<br />✔️ Dowolne funkcje<br />💸 Od 40 PLN</p>
       </div>
     </div>
   </section>
@@ -65,26 +290,11 @@
     </ul>
   </section>
 
-  <section class="section" id="cennik">
-    <h2>Cennik</h2>
-    <div class="pricing">
-      <div class="plan">
-        <h4>Podstawowy</h4>
-        <p>✔️ Komendy /ping /help<br>✔️ Kick, ban<br>💸 10 PLN</p>
-      </div>
-      <div class="plan">
-        <h4>Premium</h4>
-        <p>✔️ Ticket system<br>✔️ Logi i powiadomienia<br>✔️ AntiSpam<br>💸 25 PLN</p>
-      </div>
-      <div class="plan">
-        <h4>Custom</h4>
-        <p>✔️ Bot na zamówienie<br>✔️ Dowolne funkcje<br>💸 Od 40 PLN</p>
-      </div>
-    </div>
-  </section>
+  <a href="https://discord.gg/" class="order-button" target="_blank" rel="noopener noreferrer">Zamów bota</a>
 
   <footer>
-    <p>&copy; GrimCode 2025. Wszystkie prawa zastrzeżone.</p>
+    &copy; 2025 GrimCode. Wszelkie prawa zastrzeżone.
   </footer>
+
 </body>
 </html>
