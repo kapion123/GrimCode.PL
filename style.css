@@ -1,1 +1,108 @@
+/* style.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Orbitron', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #0a0f1f, #00111a);
+  color: #e0f7ff;
+  line-height: 1.6;
+  padding: 0 20px;
+}
+
+header {
+  text-align: center;
+  padding: 80px 20px 40px;
+}
+
+header h1 {
+  font-size: 4rem;
+  color: #00d4ff;
+  text-shadow: 0 0 10px #00bfff;
+}
+
+header p {
+  font-size: 1.4rem;
+  margin-top: 10px;
+  color: #aadfff;
+}
+
+.buttons {
+  margin-top: 25px;
+}
+
+.buttons a {
+  background: #00d4ff;
+  color: #000;
+  padding: 12px 25px;
+  margin: 0 10px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.buttons a:hover {
+  background: #009ec3;
+  color: white;
+}
+
+section {
+  margin: 60px auto;
+  max-width: 1000px;
+}
+
+section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #00caff;
+  text-align: center;
+}
+
+.team, .bots, .features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.card {
+  background: rgba(0, 212, 255, 0.05);
+  padding: 20px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(0, 212, 255, 0.3);
+  width: 220px;
+}
+
+.card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  border: 3px solid #00caff;
+}
+
+.card h3 {
+  font-size: 1.2rem;
+  color: #00eaff;
+  margin: 10px 0 5px;
+}
+
+.card p {
+  font-size: 0.95rem;
+  color: #a7e9ff;
+}
+
+footer {
+  text-align: center;
+  padding: 30px 0;
+  color: #88cadd;
+  font-size: 0.9rem;
+  border-top: 1px solid #0a88a5;
+  margin-top: 60px;
+}
 
